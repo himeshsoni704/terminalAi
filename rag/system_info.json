@@ -1,0 +1,30 @@
+{
+  "os": "Linux",
+  "kernel": "6.18.10-200.fc43.x86_64",
+  "distro": "fedora",
+  "shell": "/bin/bash",
+  "package_manager": "dnf",
+  "home": "/home/himesh",
+  "username": "himesh",
+  "hostname": "fedora",
+  "mounted_drives": [
+    "sda       ",
+    "sda1      /run/media/himesh/69B5-FCAA",
+    "zram0     [SWAP]",
+    "nvme0n1   ",
+    "nvme0n1p1 /boot/efi",
+    "nvme0n1p2 ",
+    "nvme0n1p3 /run/media/himesh/Windows",
+    "nvme0n1p4 /mnt/ai",
+    "nvme0n1p5 ",
+    "nvme0n1p6 /boot",
+    "nvme0n1p7 /home"
+  ],
+  "path": [
+    "/mnt/ai/ai-agent/venv/bin",
+    "/home/himesh/.local/bin",
+    "/home/himesh/bin",
+    "/usr/local/bin",
+    "/usr/bin"
+  ]
+}

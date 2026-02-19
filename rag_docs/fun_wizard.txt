@@ -1,0 +1,7 @@
+cowsay hello
+fortune | cowsay
+fortune | cowsay | lolcat
+cmatrix
+timeout 5 cmatrix
+sl
+toilet hello

@@ -1,0 +1,26 @@
+{
+  "Desktop": "/home/himesh/Desktop",
+  "Documents": "/home/himesh/Documents",
+  "Downloads": "/home/himesh/Downloads",
+  "Music": "/home/himesh/Music",
+  "Pictures": "/home/himesh/Pictures",
+  "Videos": "/home/himesh/Videos",
+  ".config": "/home/himesh/.config",
+  ".local": "/home/himesh/.local",
+  "mount_ai": "/mnt/ai",
+  "_home_listing": [
+    "ai-agent",
+    "Desktop",
+    "Documents",
+    "Downloads",
+    "Music",
+    "ollama-data",
+    "Pictures",
+    "Public",
+    "Templates",
+    "test",
+    "test.asm",
+    "test.o",
+    "Videos"
+  ]
+}

@@ -1,0 +1,64 @@
+Linux Networking Commands Reference
+
+Check IP address:
+  ip addr show
+  ip a
+
+Check network interfaces:
+  nmcli device status
+  nmcli connection show
+
+Connect to WiFi:
+  nmcli device wifi connect "SSID" password "password"
+
+List available WiFi networks:
+  nmcli device wifi list
+
+Ping a host:
+  ping -c 4 google.com
+
+Trace route to a host:
+  traceroute google.com
+  tracepath google.com
+
+DNS lookup:
+  dig example.com
+  nslookup example.com
+  host example.com
+
+Download a file:
+  wget https://example.com/file
+  curl -O https://example.com/file
+  curl -L -o output.file https://example.com/file
+
+Check open ports on local machine:
+  ss -tuln
+  sudo nmap -sT localhost
+
+Scan remote host ports:
+  nmap <ip-address> (requires: sudo dnf install nmap)
+
+SSH into remote machine:
+  ssh user@hostname
+  ssh -p 2222 user@hostname  (custom port)
+  ssh -i ~/.ssh/key user@hostname  (with key)
+
+Copy files over SSH:
+  scp file user@host:/remote/path
+  scp -r directory user@host:/remote/path
+  rsync -avz directory/ user@host:/remote/path/
+
+Firewall management (firewalld):
+  sudo firewall-cmd --state
+  sudo firewall-cmd --list-all
+  sudo firewall-cmd --add-port=8080/tcp --permanent
+  sudo firewall-cmd --remove-port=8080/tcp --permanent
+  sudo firewall-cmd --reload
+
+Check public IP:
+  curl ifconfig.me
+  curl icanhazip.com
+
+Test HTTP endpoint:
+  curl -I https://example.com  (headers only)
+  curl -X POST -d '{"key":"value"}' -H "Content-Type: application/json" https://example.com/api

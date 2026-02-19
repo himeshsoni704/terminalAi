@@ -1,0 +1,1 @@
+Use 'dnf install <package>' to install software on Fedora.

@@ -1,0 +1,61 @@
+Linux User and Permission Management Reference
+
+Add a new user:
+  sudo useradd -m username
+  sudo useradd -m -s /bin/bash username  (with bash shell)
+
+Set user password:
+  sudo passwd username
+
+Delete a user:
+  sudo userdel username
+  sudo userdel -r username  (remove home directory too)
+
+Add user to a group:
+  sudo usermod -aG groupname username
+
+List user groups:
+  groups username
+  id username
+
+Create a group:
+  sudo groupadd groupname
+
+Delete a group:
+  sudo groupdel groupname
+
+Switch user:
+  su - username
+
+Run command as another user:
+  sudo -u username command
+
+List all users:
+  cat /etc/passwd
+  getent passwd
+
+List all groups:
+  cat /etc/group
+  getent group
+
+Check who is logged in:
+  who
+  w
+
+Lock a user account:
+  sudo usermod -L username
+
+Unlock a user account:
+  sudo usermod -U username
+
+Change default shell:
+  sudo chsh -s /bin/zsh username
+
+View sudo privileges:
+  sudo -l
+
+Edit sudoers file:
+  sudo visudo
+
+Grant sudo access to a user:
+  sudo usermod -aG wheel username  (Fedora uses 'wheel' group)

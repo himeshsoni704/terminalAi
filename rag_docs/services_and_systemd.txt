@@ -1,0 +1,72 @@
+Fedora Services and Systemd Reference
+
+Check service status:
+  sudo systemctl status <service-name>
+
+Start a service:
+  sudo systemctl start <service-name>
+
+Stop a service:
+  sudo systemctl stop <service-name>
+
+Restart a service:
+  sudo systemctl restart <service-name>
+
+Enable service at boot:
+  sudo systemctl enable <service-name>
+
+Disable service at boot:
+  sudo systemctl disable <service-name>
+
+List all active services:
+  systemctl list-units --type=service --state=active
+
+List all failed services:
+  systemctl list-units --type=service --state=failed
+
+View service logs:
+  journalctl -u <service-name>
+  journalctl -u <service-name> -f  (follow live)
+  journalctl -u <service-name> --since today
+
+Check if service is enabled:
+  systemctl is-enabled <service-name>
+
+Reload systemd daemon (after editing unit files):
+  sudo systemctl daemon-reload
+
+Create a custom systemd service:
+  Create file: /etc/systemd/system/myservice.service
+  [Unit]
+  Description=My Custom Service
+  After=network.target
+
+  [Service]
+  Type=simple
+  ExecStart=/usr/bin/python3 /path/to/script.py
+  Restart=on-failure
+  User=myuser
+
+  [Install]
+  WantedBy=multi-user.target
+
+  Then run:
+  sudo systemctl daemon-reload
+  sudo systemctl enable myservice
+  sudo systemctl start myservice
+
+List all timers:
+  systemctl list-timers
+
+Mask/unmask a service (prevent it from starting):
+  sudo systemctl mask <service-name>
+  sudo systemctl unmask <service-name>
+
+Common services on Fedora:
+  sshd - SSH server
+  httpd - Apache web server
+  nginx - Nginx web server
+  firewalld - Firewall
+  NetworkManager - Network management
+  docker - Docker containers
+  crond - Cron scheduler

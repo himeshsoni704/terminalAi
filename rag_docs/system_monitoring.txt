@@ -1,0 +1,59 @@
+Linux System Monitoring Commands
+
+Check disk usage:
+  df -h
+
+Check directory size:
+  du -sh /path/to/directory
+
+Check memory usage:
+  free -h
+
+Check CPU info:
+  lscpu
+
+Monitor processes in real-time:
+  top
+  htop (requires install: sudo dnf install htop)
+
+List running processes:
+  ps aux
+
+Kill a process by PID:
+  kill <pid>
+  kill -9 <pid>  (force kill)
+
+Kill a process by name:
+  pkill <process-name>
+  killall <process-name>
+
+Check system uptime:
+  uptime
+
+Check system load average:
+  cat /proc/loadavg
+
+View system logs:
+  journalctl -xe
+  journalctl -u <service-name>
+  journalctl --since "1 hour ago"
+
+Check open ports:
+  ss -tuln
+  sudo netstat -tuln
+
+Monitor disk I/O:
+  iostat (requires: sudo dnf install sysstat)
+  iotop (requires: sudo dnf install iotop)
+
+Check temperature sensors:
+  sensors (requires: sudo dnf install lm_sensors)
+
+Monitor network traffic:
+  iftop (requires: sudo dnf install iftop)
+  nload (requires: sudo dnf install nload)
+
+System information overview:
+  neofetch (requires: sudo dnf install neofetch)
+  hostnamectl
+  uname -a

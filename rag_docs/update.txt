@@ -1,0 +1,1 @@
+Always update Fedora packages before installing new software.

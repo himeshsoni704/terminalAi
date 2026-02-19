@@ -1,0 +1,67 @@
+Linux File Operations Reference
+
+Create a file:
+  touch filename.txt
+
+Create a directory:
+  mkdir dirname
+  mkdir -p path/to/nested/dir
+
+Copy files:
+  cp source destination
+  cp -r source_dir destination_dir  (recursive)
+
+Move/rename files:
+  mv source destination
+
+Delete files:
+  rm filename
+  rm -rf directory  (recursive force delete, use with caution)
+
+Find files by name:
+  find /path -name "filename"
+  find /path -name "*.txt"
+
+Find files by size:
+  find /path -size +100M  (files larger than 100MB)
+
+Find files modified recently:
+  find /path -mtime -1  (modified in last 24 hours)
+
+Search inside files:
+  grep "pattern" file
+  grep -r "pattern" directory  (recursive)
+  grep -i "pattern" file  (case insensitive)
+  grep -n "pattern" file  (show line numbers)
+
+View file contents:
+  cat file
+  less file  (paginated)
+  head -n 20 file  (first 20 lines)
+  tail -n 20 file  (last 20 lines)
+  tail -f file  (follow/live updates)
+
+Change file permissions:
+  chmod 755 file
+  chmod +x script.sh  (make executable)
+  chmod -R 644 directory  (recursive)
+
+Change file ownership:
+  sudo chown user:group file
+  sudo chown -R user:group directory
+
+Create symbolic link:
+  ln -s /path/to/target /path/to/link
+
+Check file type:
+  file filename
+
+Compare files:
+  diff file1 file2
+  diff -u file1 file2  (unified format)
+
+Archive and compress:
+  tar -czf archive.tar.gz directory/
+  tar -xzf archive.tar.gz
+  zip -r archive.zip directory/
+  unzip archive.zip
