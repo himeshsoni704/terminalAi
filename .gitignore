@@ -1,3 +1,11 @@
 venv/
+venv311/
+models/
+data/chroma/
+logs/
+__pycache__/
+*.pyc
+.env
+venv/
 __pycache__/
 *.pyc

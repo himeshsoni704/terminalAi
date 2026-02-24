@@ -9,18 +9,21 @@
   ".local": "/home/himesh/.local",
   "mount_ai": "/mnt/ai",
   "_home_listing": [
-    "ai-agent",
     "Desktop",
     "Documents",
     "Downloads",
+    "fact",
+    "fact.asm",
+    "fact.o",
+    "memory",
     "Music",
-    "ollama-data",
     "Pictures",
     "Public",
     "Templates",
     "test",
     "test.asm",
     "test.o",
-    "Videos"
+    "Videos",
+    "ystemctl --failed"
   ]
 }
