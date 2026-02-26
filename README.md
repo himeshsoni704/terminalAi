@@ -136,7 +136,3 @@ AI:  You previously asked about listing running processes using `ps aux`.
 **Himesh Soni** — [@himeshsoni704](https://github.com/himeshsoni704)
 
 ---
-
-## 📄 License
-
-This project is open-source. See [LICENSE](LICENSE) for details.
